@@ -10,7 +10,17 @@ public class GestionEmployes {
                 .setPrenom("jojo")
                 .setNumeroDeSecuriteSocial(454464646)
                 .createEmploye();
-        System.out.println(un);
+
+        Employe deux = new EmployeBuilder()
+                .setBase(100)
+                .setEchelon(9)
+                .setNom("tata")
+                .setNbHeure(50)
+                .setPrenom("mimi")
+                .setNumeroDeSecuriteSocial(84654656)
+                .createEmploye();
+
+        System.out.println(un + "\n" + deux);
     }
 
 }
