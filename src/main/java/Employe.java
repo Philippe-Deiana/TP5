@@ -16,11 +16,14 @@ public class Employe{
         this.base = base;
     }
 
-    public double salaire(){
+    public double calculerSalaireBrut(){
 
         double salaireBrut = base * nbHeure ;
-        double salaireNet = 0.8*salaireBrut ;
         return  salaireBrut;
+    }
+
+    public double calculerSalaireNet(){
+        return calculerSalaireBrut() * 0.8;
     }
 
     @Override
@@ -32,8 +35,8 @@ public class Employe{
                 ", echelon=" + echelon +
                 ", base=" + base +
                 ", nbHeure=" + nbHeure +
-                ", salaire brut=" + salaire() +
-                ", salaire net=" + 0.8*salaire() +
+                ", salaire brut=" + calculerSalaireBrut() +
+                ", salaire net=" + calculerSalaireNet() +
                 '}';
     }
 }
