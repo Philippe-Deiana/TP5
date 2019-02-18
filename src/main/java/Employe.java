@@ -18,8 +18,7 @@ public class Employe{
 
     public double calculerSalaireBrut(){
 
-        double salaireBrut = base * nbHeure ;
-        return  salaireBrut;
+        return  base * nbHeure;
     }
 
     public double calculerSalaireNet(){

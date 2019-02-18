@@ -3,6 +3,8 @@ public class EmployeBuilder {
     private String nom;
     private String prenom;
     private int echelon;
+    private double nbHeure;
+    private double base;
 
     public EmployeBuilder setNumeroDeSecuriteSocial(int numeroDeSecuriteSocial) {
         this.numeroDeSecuriteSocial = numeroDeSecuriteSocial;
@@ -24,7 +26,17 @@ public class EmployeBuilder {
         return this;
     }
 
+    public EmployeBuilder setNbHeure(double nbHeure) {
+        this.nbHeure = nbHeure;
+        return this;
+    }
+
+    public EmployeBuilder setBase(double base) {
+        this.base = base;
+        return this;
+    }
+
     public Employe createEmploye() {
-        return new Employe(numeroDeSecuriteSocial, nom, prenom, echelon);
+        return new Employe(numeroDeSecuriteSocial, nom, prenom, echelon, nbHeure, base);
     }
 }
