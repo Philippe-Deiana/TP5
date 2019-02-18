@@ -21,6 +21,15 @@ public class GestionEmployes {
                 .createEmploye();
 
         System.out.println(un + "\n" + deux);
+
+        Employe co ,fab, tech ;
+
+        co= new CommercialBuilder()
+                .setChiffreAffaires(500)
+                .setTauxComission(465)
+                .createCommercial();
+
+        System.out.println(co);
     }
 
 }
